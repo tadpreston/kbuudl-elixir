@@ -12,9 +12,9 @@
   <body>
     <nav class="amber darken-4" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Logo</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Navbar Link</a></li>
+        <%= link "Kbuudl", to: Routes.page_path(@conn, :index), id: "logo-container", class: "brand-logo" %>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><%= link "Register", to: Routes.user_path(@conn, :new) %></li>
         </ul>
         <ul id="nav-mobile" class="sidenav">
           <li><a href="#">Navbar Link</a></li>
