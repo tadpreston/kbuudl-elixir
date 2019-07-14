@@ -1,5 +1,5 @@
 <section class="kbdl-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Kbuukd" %></h1>
+  <h1><%= gettext "Welcome to %{name}!", name: "Kbuudl" %></h1>
   <p>A productive way to store your collectables.</p>
 </section>
 
