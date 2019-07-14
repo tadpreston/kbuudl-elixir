@@ -1,19 +1,33 @@
-<%= form_for @changeset, @action, fn f -> %>
-  <%= if @changeset.action do %>
-    <div class="alert alert-danger">
-      <p>Oops, something went wrong! Please check the errors below.</p>
-    </div>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <%= form_for @changeset, @action, [class: "col s12"], fn f -> %>
+      <%= if @changeset.action do %>
+        <div class="alert alert-danger">
+          <p>Oops, something went wrong! Please check the errors below.</p>
+        </div>
+      <% end %>
 
-  <%= label f, :name %>
-  <%= text_input f, :name %>
-  <%= error_tag f, :name %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= label f, :name %>
+          <%= text_input f, :name %>
+          <%= error_tag f, :name %>
+        </div>
+      </div>
 
-  <%= label f, :username %>
-  <%= text_input f, :username %>
-  <%= error_tag f, :username %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= label f, :username %>
+          <%= text_input f, :username %>
+          <%= error_tag f, :username %>
+        </div>
+      </div>
 
-  <div>
-    <%= submit "Save" %>
+      <div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
