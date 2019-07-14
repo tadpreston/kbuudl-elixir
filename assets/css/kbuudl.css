@@ -26,6 +26,12 @@
   display: none;
 }
 
+.help-block {
+  color: #a94442;
+  display: block;
+  margin: 1rem 0 2rem;
+}
+
 .kbdl-hero {
   text-align: center;
   border-bottom: 1px solid #e3e3e3;
