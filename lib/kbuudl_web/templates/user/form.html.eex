@@ -23,6 +23,25 @@
         </div>
       </div>
 
+      <%= inputs_for f, :credential, fn cf -> %>
+        <div class="row">
+          <div class="input-field col s12">
+            <%= label cf, :email %>
+            <%= text_input cf, :email %>
+            <%= error_tag cf, :email %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <%= label cf, :password %>
+            <%= password_input cf, :password %>
+            <%= error_tag cf, :password %>
+          </div>
+        </div
+      <% end %>
+
+
       <div>
         <button class="btn waves-effect waves-light" type="submit" name="action">Submit
           <i class="material-icons right">send</i>
