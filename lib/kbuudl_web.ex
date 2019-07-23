@@ -23,6 +23,7 @@ defmodule KbuudlWeb do
 
       import Plug.Conn
       import KbuudlWeb.Gettext
+      import KbuudlWeb.Auth, only: [authenticate_user: 2]
       alias KbuudlWeb.Router.Helpers, as: Routes
     end
   end

@@ -4,6 +4,8 @@ defmodule KbuudlWeb.UserController do
   alias Kbuudl.Accounts
   alias Kbuudl.Accounts.User
 
+  plug :authenticate_user when action in [:show]
+
   def new(conn, _params) do
     changeset = Accounts.change_registration(%User{}, %{})
     render(conn, "new.html", changeset: changeset)
